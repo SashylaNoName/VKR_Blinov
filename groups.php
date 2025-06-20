@@ -632,6 +632,7 @@ $(document).ready(function() {
                         if (Object.keys(changes[studentId]).length === 0) delete changes[studentId];
                     }
                     alert('Поле успешно сохранено!');
+                    window.location.href = `groups.php?group_id=${groupId}`;
                     const row = $(`tr[data-student-id="${studentId}"]`);
                     calculateTotalScore(row);
                 } else {
@@ -683,6 +684,7 @@ $(document).ready(function() {
             const errors = results.filter(r => r.status === 'rejected').map(r => r.reason.message);
             if (errors.length === 0) {
                 alert('Все данные успешно сохранены!');
+                window.location.href = `groups.php?group_id=${groupId}`;
                 $('.student-row').each(function() {
                     calculateTotalScore($(this));
                 });
