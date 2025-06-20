@@ -1,0 +1,321 @@
+* {
+    user-select: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Montserrat, sans-serif;
+}
+
+
+p {
+    margin: 10px 0;
+}
+
+
+.msg {
+    width: 320px;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-weight: bold;
+}
+.msg:hover{
+    background: #03e9f4;
+    color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4,
+    0 0 25px #03e9f4,
+    0 0 50px #03e9f4,
+    0 0 100px #03e9f4;
+}
+
+.logout {
+    color: #b7625c;
+}
+html{
+    height: 100%;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: linear-gradient(#141e30, #243b55);
+}
+.login-box{
+    user-select: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%,-50%);
+    background: rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+.login-box h2{
+    user-select: none;
+    cursor: default;
+    margin: 0 0 30px;
+    padding: 0;
+    color: #03e9f4;
+    text-align: center;
+}
+.login-box h4{
+
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+ input[type="submit"], input[type="reset"] {
+    color: white;
+    background-color: black;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+::-ms-reveal {
+    filter: invert(100%);
+}
+button{
+    background: none;
+    color: #03e9f4;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    font-size: medium;
+}
+button.sv{
+    width: 320px;
+    height: 50px;
+    background: none;
+    color: #03e9f4;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    font-size: medium;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus{
+
+    -webkit-box-shadow: 0 0 0px 1000px rgb(15, 24, 35) inset;
+    -webkit-text-fill-color: #ffffff;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Стили для селектора роли */
+.user-box select {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    font-size: 16px;
+    width: 100%;
+    padding: 10px 0;
+    outline: none;
+    transition: all 0.3s ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+.user-box select:focus {
+    border-bottom: 1px solid #03e9f4;
+}
+
+.user-box select option {
+    background: #081b29;
+    color: #fff;
+    font-size: 16px;
+}
+
+/* Стили для метки селектора */
+.user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.user-box select:focus ~ label,
+.user-box select:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+}
+
+/* Дополнительный стиль для стрелки селектора */
+.user-box {
+    position: relative;
+}
+
+
+
+.user-box select:focus ~ ::after {
+    color: #03e9f4;
+}
+
+
+.login-box .user-box{
+    position: relative;
+}
+
+.login-box .user-box input{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+.login-box .user-box label{
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label{
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+}
+.login-box form a{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    color: #03e9f4;
+    font-size: 14px;
+    line-height: 2;
+    text-decoration: none;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px;
+}
+
+.sv:hover{
+    color: #ffffff;
+}
+a.sv:hover{
+    .sv:hover{
+       color: #ffffff;
+    }
+    background: #03e9f4;
+    color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4,
+    0 0 25px #03e9f4,
+    0 0 50px #03e9f4,
+    0 0 100px #03e9f4;
+}
+
+.login-box a span{
+    position: absolute;
+    display: block;
+}
+.login-box a span:nth-child(1){
+    top: 0;
+    left: -100%;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(90deg,transparent,#03e9f4);
+    animation: btn-anim1 1s linear infinite;
+}
+@keyframes btn-anim1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+}
+.login-box a span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#03e9f4);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s;
+}
+@keyframes btn-anim2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+}
+.login-box a span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#03e9f4);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s;
+}
+@keyframes btn-anim3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+}
+.login-box a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#03e9f4);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s;
+}
+@keyframes btn-anim4{
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100% ;
+    }
+}
+
+.msg{
+
+    text-align: center;
+    align-items: center;
+}

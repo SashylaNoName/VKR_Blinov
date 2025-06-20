@@ -1,0 +1,9 @@
+{
+    "name": "me/scientific_work",
+    "description": "Проект для управления группами студентов",
+    "type": "project",
+    "require": {
+        "phpoffice/phpspreadsheet": "^4.2",
+        "shuchkin/simplexlsx": "^1.1"
+    }
+}

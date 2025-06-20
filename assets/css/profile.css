@@ -1,0 +1,480 @@
+body, html {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    background: linear-gradient(#141e30, #243b55);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 10px;
+    position: relative;
+}
+
+.exit-form {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.exit {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 100px;
+    height: 50px;
+    background: none;
+    color: #ff5555;
+    border: 1px solid #ff5555;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.exit:hover {
+    background: #ff5555;
+    color: #fff;
+}
+
+h1 {
+    color: #03e9f4;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.msg {
+    color: #03e9f4;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.button-group button {
+    width: 100%;
+    max-width: 200px;
+    height: 50px;
+    background: none;
+    color: #03e9f4;
+    border: 1px solid #03e9f4;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.button-group button:hover {
+    background: #03e9f4;
+    color: #fff;
+    box-shadow: 0 0 10px #03e9f4;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    min-width: 600px;
+    border-collapse: collapse;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.attributes-table {
+    min-width: 100%;
+    box-shadow: none;
+}
+
+th, td {
+    height: 40px;
+    border: 1px solid #03e9f4;
+    padding: 8px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+th {
+    background: #03e9f4;
+    color: #fff;
+    font-weight: bold;
+}
+
+td {
+    display: flex;
+    justify-content: center; /* Выравнивание содержимого по центру */
+    align-items: center;
+    border: none;
+    padding: 5px 10px;
+}
+
+thead {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Стиль для ссылок на группы */
+.name_group {
+    text-decoration: none; /* Убираем подчёркивание */
+    color: #03e9f4; /* Цвет циан */
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    flex-grow: 1; /* Ссылка растягивается, чтобы занять доступное пространство */
+    text-align: center; /* Текст по центру */
+    background: rgba(3, 233, 244, 0.1); /* Лёгкий фон для контраста */
+}
+
+.name_group:hover {
+    background: #03e9f4; /* Цвет фона при наведении */
+    color: #fff; /* Белый текст при наведении */
+    box-shadow: 0 0 10px rgba(3, 233, 244, 0.5); /* Эффект свечения */
+}
+
+/* Стиль для блока с крестиком удаления */
+.delete {
+    margin-left: auto; /* Крестик прижимается к правому краю */
+    padding: 0 10px;
+}
+
+/* Стиль для кнопки удаления */
+.delete1 {
+    background: none;
+    color: #ff5555;
+    border: 1px solid #ff5555;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.delete1:hover {
+    background: #ff5555;
+    color: #fff;
+}
+
+.save-btn {
+    width: 100%;
+    max-width: 200px;
+    height: 50px;
+    background: none;
+    color: #03e9f4;
+    border: 1px solid #03e9f4;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px auto;
+    transition: all 0.3s ease;
+}
+
+.save-btn:hover {
+    background: #03e9f4;
+    color: #fff;
+    box-shadow: 0 0 10px #03e9f4;
+}
+
+/* Стили для фильтра по предметам */
+.filter {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+}
+
+.filter select {
+    width: 100%;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #03e9f4;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%2303e9f4" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+.filter select:focus {
+    outline: none;
+    border-color: #05b0b8;
+    box-shadow: 0 0 5px rgba(3, 233, 244, 0.5);
+}
+
+.filter select option {
+    background: #081b29;
+    color: #fff;
+}
+
+.input-field {
+    color: #fff;
+    background: none;
+    border: 1px solid #03e9f4;
+    border-radius: 5px;
+    padding: 5px;
+    width: 80%;
+    max-width: 150px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.input-field::-webkit-inner-spin-button,
+.input-field::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+tr {
+    transition: all 0.3s ease;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000; /* Убеждаемся, что модалки выше всего */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #081b29; /* Тёмный фон */
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    color: #fff;
+    z-index: 1001; /* Контент модалки выше фона */
+}
+
+.modal-content h2 {
+    color: #03e9f4; /* Цвет заголовков */
+    margin-bottom: 15px;
+}
+
+.modal-content label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #03e9f4; /* Цвет меток */
+}
+
+.modal-content input, .modal-content select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    background: #081b29; /* Темный фон */
+    border: 1px solid #03e9f4;
+    color: #fff; /* Белый текст */
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.modal-content select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%2303e9f4" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+.modal-content select:focus {
+    outline: none;
+    border-color: #05b0b8;
+    box-shadow: 0 0 5px rgba(3, 233, 244, 0.5);
+}
+
+.modal-content select option {
+    background: #081b29; /* Темный фон для опций */
+    color: #fff; /* Белый текст для опций */
+}
+
+.modal-content button {
+    width: 100%;
+    max-width: 150px;
+    height: 40px;
+    margin: 10px 0;
+    background: none;
+    border: 1px solid #03e9f4;
+    color: #03e9f4;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal-content button:hover {
+    background: #03e9f4;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(3, 233, 244, 0.5);
+}
+
+.close {
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #03e9f4;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        padding: 0 5px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .exit {
+        width: 80px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .button-group button, .save-btn {
+        max-width: 150px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    table {
+        min-width: 400px;
+    }
+
+    th, td {
+        padding: 6px;
+        font-size: 14px;
+    }
+
+    .input-field {
+        width: 90%;
+        max-width: 120px;
+        font-size: 12px;
+    }
+
+    .modal-content {
+        width: 90%;
+        max-width: 400px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 18px;
+    }
+
+    .exit {
+        width: 60px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .button-group button, .save-btn {
+        max-width: 120px;
+        height: 35px;
+        font-size: 12px;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 15px;
+        border: 1px solid #03e9f4;
+        padding: 10px;
+        position: relative;
+        background: #081b29;
+    }
+
+    td {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        padding: 5px 0;
+    }
+
+    td:before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #03e9f4;
+        min-width: 100px;
+        white-space: normal;
+    }
+
+    .input-field {
+        width: 60%;
+        max-width: 100px;
+        font-size: 12px;
+        padding: 3px;
+    }
+
+    .delete1 {
+        margin-left: 10px;
+    }
+
+    .modal-content {
+        width: 95%;
+        max-width: 300px;
+        padding: 10px;
+    }
+
+    .modal-content input, .modal-content select {
+        font-size: 12px;
+    }
+
+    .modal-content button {
+        max-width: 120px;
+        height: 35px;
+        font-size: 12px;
+    }
+}

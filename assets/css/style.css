@@ -1,0 +1,313 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: auto; /* Убрано фиксированное значение */
+    min-height: 100%;
+    background: linear-gradient(#141e30, #243b55);
+    font-family: Montserrat, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Предотвращение горизонтальной прокрутки */
+}
+
+.main-container {
+    width: 100%;
+    min-height: 100vh; /* Минимальная высота экрана */
+    overflow-y: auto; /* Прокрутка по вертикали */
+    display: flex;
+    justify-content: center;
+    padding-top: 40px; /* Увеличен отступ сверху */
+    padding-bottom: 20px; /* Обеспечение видимости нижних элементов */
+}
+
+.content-wrapper {
+    width: 100%;
+    max-width: 620px; /* Немного увеличено для удобства */
+    padding: 0 10px;
+}
+
+.table-across {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.h1, h2 {
+    color: #03e9f4;
+    text-align: center;
+    margin: 0;
+}
+
+.msg {
+    width: 100%;
+    max-width: 320px;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(248, 91, 91);
+    display: block;
+    margin: 10px auto;
+}
+
+.msg:hover {
+    background: #03e9f4;
+    color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+}
+
+.logout-form {
+    margin-left: auto;
+}
+
+.exit {
+    width: 100px;
+    height: 40px;
+    background: none;
+    color: #03e9f4;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.exit:hover, button.sv:hover, .saveButton:hover {
+    background: #03e9f4;
+    color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+    transition: 0.3s;
+}
+
+.table-wrapper {
+    width: 100%;
+    max-width: 500px;
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+table {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #03e9f4;
+    color: #ffffff;
+    position: relative; /* Убрано sticky для корректного отображения */
+}
+
+th {
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+tbody {
+    color: #03e9f4;
+}
+
+tr:hover {
+    color: #ffffff;
+    background: rgba(3, 233, 244, 0.2);
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.group-info {
+    text-align: left;
+}
+
+.name_group {
+    cursor: pointer;
+    display: inline-block;
+}
+
+.action {
+    width: 50px;
+}
+
+.subject-name {
+    text-align: left;
+}
+
+td a {
+    color: #03e9f4;
+    text-decoration: none;
+}
+
+td a:hover {
+    color: #ffffff;
+}
+
+button.sv, .saveButton {
+    width: 100%;
+    max-width: 200px;
+    height: 40px;
+    background: none;
+    color: #03e9f4;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.filter {
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.filter select, .inputField {
+    width: 100%;
+    max-width: 200px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: 1px solid #03e9f4;
+    border-radius: 5px;
+    font-size: 14px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%2303e9f4' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+.inputField option {
+    color: #000;
+    background: #fff;
+    padding: 5px;
+}
+
+.inputField option:disabled {
+    color: #888;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 400px;
+    background: linear-gradient(#141e30, #243b55);
+    padding: 20px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    z-index: 1000;
+    text-align: center;
+}
+
+.as {
+    color: #03e9f4;
+    margin: 10px 0;
+}
+
+.close_popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #03e9f4;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.close_popup:hover {
+    color: #ffffff;
+}
+
+/* Адаптивные стили */
+@media (max-width: 600px) {
+    .table-across {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .table-wrapper {
+        max-width: 100%;
+    }
+
+    th {
+        font-size: 16px;
+    }
+
+    td {
+        font-size: 14px;
+    }
+
+    .exit, button.sv, .saveButton {
+        font-size: 12px;
+        max-width: 150px;
+        height: 35px;
+    }
+
+    .popup {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .inputField, .filter select {
+        font-size: 12px;
+        max-width: 100%;
+    }
+
+    .as {
+        font-size: 20px;
+    }
+
+    .header-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logout-form {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .h1 {
+        font-size: 1.2em;
+    }
+
+    th {
+        font-size: 14px;
+    }
+
+    td {
+        font-size: 12px;
+    }
+
+    .group-info, .subject-name {
+        text-align: center;
+    }
+}
